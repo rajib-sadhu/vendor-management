@@ -1,0 +1,4 @@
+.main-body {
+    clip-path: polygon(0 0, 21% 0, 58% 100%, 0% 100%);
+    background-color: #25273d;
+  }
