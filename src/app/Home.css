@@ -20,3 +20,28 @@
     left: 50%;
     transform: translate(-50%, -50%);
   }
+
+
+
+  /* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+
+input{
+  /* outline: none; */
+  padding: 10px;
+  height: 30px;
+}
+input:focus{
+  background-color: #e9eaff;
+  padding: 5px;
+}
+
+/* Firefox */
+input[type=number] {
+    -moz-appearance: textfield;
+}

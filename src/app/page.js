@@ -8,7 +8,7 @@ import Image from 'next/image'
 import { useState } from 'react';
 import AddModal from '@/components/AddModal';
 
-export default function Home() {
+const Home = async () => {
 
   const [showAddNewModal, setShowAddNewModal] = useState(false);
   const handleAddNewModalClose = () => setShowAddNewModal(false);
@@ -54,3 +54,6 @@ export default function Home() {
     </div>
   )
 }
+
+
+export default Home;
