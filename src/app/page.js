@@ -1,16 +1,17 @@
 "use client";
 
-import {AiOutlinePlus} from 'react-icons/ai'
+import { AiOutlinePlus } from 'react-icons/ai'
 
 import './Home.css'
 
 import Image from 'next/image'
 import { useState } from 'react';
+import AddModal from '@/components/AddModal';
 
 export default function Home() {
 
   const [showAddNewModal, setShowAddNewModal] = useState(false);
-
+  const handleAddNewModalClose = () => setShowAddNewModal(false);
 
   return (
     <div className='relative overflow-hidden'>
@@ -22,10 +23,10 @@ export default function Home() {
               <h3 className='md:text-xl text-sm font-semibold'>Vendor <span className='text-[#131e9f]' >Management</span></h3>
               <button title='Add new user' onClick={() => setShowAddNewModal(true)} className='md:text-base text-xs flex items-center md:gap-2 gap-1 md:border-2 border border-blue-600 md:px-2 px-1 py-1 rounded-md text-blue-600 font-semibold hover:text-white hover:bg-blue-600 duration-200'> <AiOutlinePlus /> Add New</button>
             </div>
-            {/* <div>
-              {showAddNewModal && <AddModal handleAddNewModalClose={handleAddNewModalClose} refetch={refetch} />}
-              {showEditModal && <EditModal updateData={updateData} handleEditModalClose={handleEditModalClose} refetch={refetch} />}
-            </div> */}
+            <div>
+              {showAddNewModal && <AddModal handleAddNewModalClose={handleAddNewModalClose} />}
+              {/* {showEditModal && <EditModal updateData={updateData} handleEditModalClose={handleEditModalClose} refetch={refetch} />} */}
+            </div>
           </div>
           {/* {
             isLoading ?

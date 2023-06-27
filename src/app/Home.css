@@ -2,3 +2,21 @@
     clip-path: polygon(0 0, 21% 0, 58% 100%, 0% 100%);
     background-color: #25273d;
   }
+
+
+  .modal-wrapper{
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    background-color: #87878790;
+  }
+  
+  .modal-container{
+    position: fixed;
+    max-width: 30rem;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
